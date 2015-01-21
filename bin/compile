@@ -74,6 +74,9 @@ PATH=$build_dir/vendor/node/bin:$PATH
 # Run subsequent node/npm commands from the build path
 cd $build_dir
 
+# Update to the latest version of npm
+npm install -g npm@latest
+
 # If node_modules directory is checked into source control then
 # rebuild any native deps. Otherwise, restore from the build cache.
 if test -d $build_dir/node_modules; then
